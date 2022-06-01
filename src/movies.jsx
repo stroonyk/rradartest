@@ -8,13 +8,19 @@ import "react-datepicker/dist/react-datepicker.css";
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 
 const Movies = () => {
-  const StartDatePicker = () => {
-    const [startDate, setStartDate] = useState();
+  const [startDate, setStartDate] = useState();
+  const [endDate, setEndDate] = useState();
+
+  const StartDatePicker = () => {    
     return (
       <DatePicker
         dateFormat={"yyyy-MM-dd"}
         selected={startDate}
-        onChange={(date) => setStartDate(date)}
+        onChange={(date) => {
+          setStartDate(date);
+          console.log('here');
+        }}
+          
         showYearDropdown
         dateFormatCalendar="yyyy-MM-dd"
         yearDropdownItemNumber={15}
@@ -22,13 +28,16 @@ const Movies = () => {
       />
     );
   };
-  const EndDatePicker = () => {
-    const [endDate, setEndDate] = useState();
+  const EndDatePicker = () => {    
     return (
       <DatePicker 
         dateFormat={"yyyy-MM-dd"}
         selected={endDate}
-        onChange={(date) => setEndDate(date)}
+        onChange={(date) => {
+          setEndDate(date);
+          console.log('hehe');
+
+        }}
         showYearDropdown
         dateFormatCalendar="yyyy-MM-dd"
         yearDropdownItemNumber={15}
@@ -53,7 +62,6 @@ const Movies = () => {
     }
     let movies = getMovies();  
     return (        
-
         <div>       
           <div>
             <StartDatePicker />
