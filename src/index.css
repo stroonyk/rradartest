@@ -1,0 +1,9 @@
+.liked
+{ 
+    background-color:green !important;
+    font-size:1000pt;
+}
+.disliked
+{ 
+    background-color:red !important;
+}
