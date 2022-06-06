@@ -7,3 +7,43 @@
 { 
     background-color:red !important;
 }
+.date-filter
+{
+    align-items:center;
+}
+.ui.label
+{
+background-color: #dae8f7 !important;
+}
+
+.filter-row
+{
+    height:70px;
+}
+body, .outer-div
+{
+    background-color:#dae8f7 !important;
+}
+
+.filter-button
+{
+    border:1px solid black !important;
+}
+.ui.card, .ui.cards>.card
+{
+    box-shadow:0 1px 3px 0 #007afc, 0 0 0 1px #007afc !important;
+   background-color: #f5f7fa !important;
+}
+input 
+{
+    cursor: pointer;
+    border:1px solid #007afc !important;
+}
+input::-webkit-calendar-picker-indicator 
+{
+    cursor: pointer;
+}
+input#filepicker::-webkit-calendar-picker-indicator 
+{
+    cursor: pointer;
+}

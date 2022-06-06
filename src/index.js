@@ -3,19 +3,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Header, Icon, Segment } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
-import Movies from "./movies";
-
-
+import Movies from "./components/Movies";
 
 const App = () => {
-
   return (
-    
-    <Segment textAlign="center">
-     
+    <Segment className="outer-div" textAlign="center">
       <Header as="h2" icon textAlign="center">
         <Icon name="film" />
-        <Header.Content>Several films</Header.Content>
+        <Header.Content>Raphas films</Header.Content>
       </Header>
       <Movies />
     </Segment>
