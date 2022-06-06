@@ -1,7 +1,7 @@
 import { Input,Icon } from 'semantic-ui-react';
 
 const BudgetFilter = (props) => {
-    let placeholderText = props.budget ? props.label + ' ' + props.budget + 'M' : props.label + '(Millions)';
+    let placeholderText = props.budget ? '' : `${props.label} (Millions)`;
     return (
       <Input 
         type="number" 
