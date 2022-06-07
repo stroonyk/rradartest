@@ -1,5 +1,8 @@
 import { Input,Label } from 'semantic-ui-react';
 
+/*
+* Out Date Filter. Does what it says on the tin :)
+*/
 const DateFilter = (props) => {
     return (
       <div className="ui input date-filter" >
@@ -14,4 +17,5 @@ const DateFilter = (props) => {
       </div>
     )
   }
+  
   export default DateFilter;

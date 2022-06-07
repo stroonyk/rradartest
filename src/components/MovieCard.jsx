@@ -1,22 +1,28 @@
 import { Icon, Button, Card, Image } from "semantic-ui-react";
 import React,{useState} from "react";
-
-const MovieCard = ({movie,movieImage}) => {
+import { Link } from 'react-router-dom';
+/*
+* Our MovieCard component. 
+*/
+const MovieCard = ({movie,movieImage,movieId}) => {
   const [liked, setLiked] = useState(false);
   const [disliked, setDisliked] = useState(false);
-
+  /*
+  * handle the liked and disliked buttons being clicked using state
+  */
   const handleLiked = () => {
       setLiked((currentState) => !currentState);  
       setDisliked(false);
   }
-
   const handleDisliked = () => {
       setDisliked((currentState) => !currentState);  
       setLiked(false);
   }   
-
+  /*
+  * clicking on the movie will link to the DetailedMovie component using the id
+  */
   return (
-      <Card className="centered">
+      <Card className="centered" href={`DetailedMovie/${movieId}`}>
         <Card.Content>
           <Image floated="right" size="tiny" src={movieImage} />
             <Card.Header>{movie.title}</Card.Header>

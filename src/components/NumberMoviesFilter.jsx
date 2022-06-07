@@ -1,5 +1,8 @@
 import { Input,Icon } from 'semantic-ui-react'
 
+/*
+* Our Number of Movies Filter. Does what it says on the tin :)
+*/
 const NumberMoviesFilter = (props) => {
     let placeholderText = props.numberOfMovies ? '' : 'Show 200 Movies';
     return (

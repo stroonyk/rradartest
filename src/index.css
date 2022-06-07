@@ -34,6 +34,15 @@ body, .outer-div
     box-shadow:0 1px 3px 0 #007afc, 0 0 0 1px #007afc !important;
    background-color: #f5f7fa !important;
 }
+.ui.card.centered.detailed-card
+{
+    width : 900px !important;
+}
+.detailed-card .meta, .detailed-card .header
+{
+    text-align : left !important;
+}
+
 input 
 {
     cursor: pointer;

@@ -7,7 +7,9 @@ import NumberMoviesFilter from "./NumberMoviesFilter";
 import { Button } from 'semantic-ui-react'
 
 const DEFAULT_NUMBER_OF_FILMS = 200;
-
+/*
+* Our Movies Component
+*/
 const Movies = () => {
   const [startDate, setStartDate] = useState(); 
   const [endDate, setEndDate] = useState();
@@ -17,8 +19,10 @@ const Movies = () => {
   const [budgetTo, setBudgetTo] = useState('');
   const [movies,setMovies] = useState([]);
 
+  /*
+  * get the movie date
+  */
   useEffect(() => {
-    console.log('useeffect');
     setMovies(movieData.slice(0,DEFAULT_NUMBER_OF_FILMS));
   },[]);
 
@@ -76,7 +80,7 @@ const Movies = () => {
         }                
       })
     } 
-    // filter based on end date
+    // filter based on end budget
     if (budgetFrom || budgetTo)
     {
       filteredMovies = filteredMovies.filter(movie => {
