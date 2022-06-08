@@ -1,6 +1,5 @@
 import { Icon, Button, Card, Image } from "semantic-ui-react";
 import React,{useState} from "react";
-import { Link } from 'react-router-dom';
 /*
 * Our MovieCard component. 
 */
@@ -22,8 +21,8 @@ const MovieCard = ({movie,movieImage,movieId}) => {
   * clicking on the movie will link to the DetailedMovie component using the id
   */
   return (
-      <Card className="centered" href={`DetailedMovie/${movieId}`}>
-        <Card.Content>
+      <Card className="centered">
+        <Card.Content href={`DetailedMovie/${movieId}`}>
           <Image floated="right" size="tiny" src={movieImage} />
             <Card.Header>{movie.title}</Card.Header>
             <Card.Meta> {movie.tagline}</Card.Meta>
